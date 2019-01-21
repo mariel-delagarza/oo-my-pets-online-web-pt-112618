@@ -9,7 +9,7 @@ class Owner
   end
 
   def self.count
-    OWNERS.count 
+    OWNERS.count
     gets "Reset the owners? y/n"
     if y
       @@count.clear
