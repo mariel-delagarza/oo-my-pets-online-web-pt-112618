@@ -3,14 +3,13 @@ class Owner
   attr_accessor :name, :pets
 
   OWNERS = []
-  @@count = @@all.count
 
   def self.all
     OWNERS
   end
 
   def self.count
-    @@count
+    OWNERS.count 
     gets "Reset the owners? y/n"
     if y
       @@count.clear
