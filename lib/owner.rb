@@ -66,8 +66,10 @@ class Owner
   end
 
   def list_pets
-    pets.each do |pet|
-      puts pet
+    fish = pets[:fishes].count
+    dogs = pets[:dogs].count 
+    cats = pets[:cats].count 
+    puts "I have #{fish} fish, #{dogs} dog(s), and #{cats} cat(s)."
     end
   end
 
