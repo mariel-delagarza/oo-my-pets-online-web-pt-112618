@@ -10,32 +10,32 @@ class Owner
 
   def self.count
     OWNERS.count
-    gets "Reset the owners? y/n"
-    if y
-      @@count.clear
-    end
   end
+
+  def self.reset_all 
+    OWNERS.clear 
+  end 
 
   def initialize(species)
     @species = species
     OWNERS << self
-    @pets = {:cat => [], :dog => [], :fish => []}
+    @pets = {:fishes => [], :dogs => [], :cats => []}
   end
 
   def say_species
-    puts self.species
+    "I am a #{species}"
   end
 
   def buy_fish
-    @pets[:fish] << Fish.new
+    @pets[:fishes] << Fish.new
   end
 
   def buy_cat
-    @pets[:cat] << Cat.new
+    @pets[:cats] << Cat.new
   end
 
   def buy_dog
-    @pets[:dog] << Dog.new
+    @pets[:dogs] << Dog.new
   end
 
   def walk_dogs
